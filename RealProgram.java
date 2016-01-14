@@ -9,16 +9,15 @@ public class RealProgram {
 	
 	ListFiles lf = new ListFiles();
 	
-/*
-String readAll(String[] files){
-	String textDataAll = "";
-	for(int q= 0; q< files.length; q++){
-		textDataAll = textDataAll + readFile(files[q]);
+
+void resizeAll(String[] fileList, int newHeight, int newWidth) throws IOException{
+	int len = fileList.length;
+	for(int q= 0; q< len; q++){
+		resizeImage(fileList, q, newHeight, newWidth);
 	}
-	return textDataAll;
 }
  
-*/
+
 
 void resizeImage( String[] fileList , int index, int newHeight, int newWidth) throws IOException{
 	
@@ -32,7 +31,7 @@ void resizeImage( String[] fileList , int index, int newHeight, int newWidth) th
 			System.out.println(fileList[index]);
 			ImageIO.write(resized, "png", new File("photos//"+fileList[index])); 
 		}
-	System.out.println("The new size shall be: "+ newHeight + " * " + newWidth);
+	System.out.println("\nThe new size shall be: "+ newHeight + " * " + newWidth);
 	
 	}
 

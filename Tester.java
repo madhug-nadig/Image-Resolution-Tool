@@ -37,7 +37,7 @@ public class Tester{
 			System.out.println("Enter the new width: \n");
 			int newWidth= scanner.nextInt();			
 			rp.resizeImage(fileList, (index-1), newHeight, newWidth);
-			System.out.println("Much Success");
+			System.out.println("\nMuch Success!\n");
 		}
 		catch (IOException e){
 			e.printStackTrace();
@@ -45,14 +45,18 @@ public class Tester{
 		}
 		break;
 		case 3:
-			//try{
-				System.out.println();
-				/*rp.displayAll(fileList);
+			try{
+			System.out.println("Enter the new height: \n");
+			int newHeight= scanner.nextInt();
+			System.out.println("Enter the new width: \n");
+			int newWidth= scanner.nextInt();			
+			rp.resizeAll(fileList, newHeight, newWidth);
+			System.out.println("\nMuch Success\n");
 			}
-			catch(IOException e){
-				System.out.println("IO Problem");
+			catch (IOException e){
+			e.printStackTrace();
+			System.out.println("Failed!");
 			}
-			lf.openBrowser();*/
 		break;
 		default:
 		if(choice!=4)
